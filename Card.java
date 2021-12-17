@@ -7,11 +7,11 @@ public class Card{
     this.num = num;
   }
 
-  public void flipCard{
+  public void flipCard(){
     
   }
 
-  public void printCard{
+  public void printCard(){
 
   }
 }
