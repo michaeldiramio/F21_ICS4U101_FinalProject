@@ -1,12 +1,13 @@
-import DLibX.*;
+import java.util.Random;
+import java.util.Scanner;
 
-public class Main {
-
+class Main {
   public static void main(String[] args) {
-    // for testing
-    DConsole dc = new DConsole(450, 300);
-    dc.fillRect(200, 200, 50, 90);
-    dc.redraw();
-  }
 
+    
+
+    String hcoin = "Head";
+    String tcoin = "Tail";
+    
+  }
 }
