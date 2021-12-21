@@ -30,4 +30,12 @@ public class Card{
     return "Card_Images/card_back.png";
     
   }
+
+  public int getNum(){
+    return this.num;
+  }
+
+  public char getSuit(){
+    return this.suit;
+  }
 }
