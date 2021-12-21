@@ -6,7 +6,16 @@ public class Main {
     // for testing
     DConsole dc = new DConsole(450, 300);
     dc.fillRect(200, 200, 50, 90);
-    dc.redraw();
-  }
+    
 
+    Card test = new Card('s',7);
+    dc.drawImage(test.printCard(), 50, 50);
+   while(true){ 
+    test.flipCard();
+    dc.drawImage(test.printCard(), 50, 50);
+    dc.redraw();
+    dc.pause(200);
+    dc.clear();
+  }
+  }
 }

@@ -12,16 +12,16 @@ public class Card{
   }
 
   public void flipCard(){
-    if( flipped = true){
-      flipped = false;
+    if(this.flipped == true){
+      this.flipped = false;
     }else{
-      flipped = true;
+      this.flipped = true;
     }
   }
 
   public String printCard(){
 
-    if flipped = true{
+    if (this.flipped == true){
       // what file to print
       String temp = ("Card_Images/" + num + suit + ".png");
     
