@@ -16,7 +16,8 @@ public class Main {
     dc.redraw();
 
 
-    
+    dc.pause(200);
+    dc.clear();
 
     //deck tests
     System.out.println("Hello");
@@ -28,8 +29,7 @@ public class Main {
   }
   
 
-    dc.pause(200);
-    dc.clear();
+    
   }
   }
 
