@@ -1,4 +1,4 @@
-public interface Player {
+public interface PlayerInterface {
 
   public void setMoney(int x);
 
