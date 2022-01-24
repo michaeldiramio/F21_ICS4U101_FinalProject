@@ -8,8 +8,11 @@ public class Main {
     DConsole dc = new DConsole(450, 300);
     Quickselect qs = new Quickselect();
 
+
+    
     for (;;) {
       dc.clear();
+
 
       //Draws the menu screen
       qs.printMenu(dc);
