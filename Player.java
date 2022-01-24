@@ -1,20 +1,20 @@
 public class Player implements PlayerInterface {
 
-  int money;
+  double money;
 
-  public Player(int startingCash) {
+  public Player(double startingCash) {
     money = startingCash;
   }
 
-  public void setMoney(int x){
+  public void setMoney(double x){
     money = x;
   }
 
-  public void changeMoney(int x){
-    money=+x;
+  public void changeMoney(double x){
+    money+=x;
   }
   
-  public int getMoney() {
+  public double getMoney() {
     return money;
   }
 }
