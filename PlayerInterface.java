@@ -1,8 +1,8 @@
 public interface PlayerInterface {
 
-  public void setMoney(int x);
+  public void setMoney(double x);
 
-  public void changeMoney(int x);
+  public void changeMoney(double x);
   
-  public int getMoney();
+  public double getMoney();
 }

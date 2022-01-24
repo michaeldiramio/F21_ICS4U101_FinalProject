@@ -140,7 +140,7 @@ public class Dice {
     total = 0;
     int temp = 0;
     for(int i = 0; i < x; i++){
-      temp = (r.nextInt(5) + 1);
+      temp = (r.nextInt(6) + 1);
       total += temp;// creating total sum of dice
       dice.add(temp); // storing value of each dice
     }
