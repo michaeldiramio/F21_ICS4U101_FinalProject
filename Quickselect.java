@@ -10,7 +10,7 @@ public class Quickselect {
 
   public Quickselect () {
     player = new Player(1000);
-    games.add(new Crash());
+    games.add(new CoinFlip());
     //games.add(new YourGame());
     //Add the games to the arraylist here as they become complete
   }
@@ -44,7 +44,7 @@ public class Quickselect {
     if (dc.isMouseButton(1)) {
       //Game title goes here
       if(mouseX > 20 && mouseX < 102.5 && mouseY > 38.75 && mouseY < 121.25) {
-        games.get(0).run(player, dc);
+        System.out.println("1");
       }
       if(mouseX > 122.5 && mouseX < 205 && mouseY > 38.75 && mouseY < 121.25) {
         //games[1].run();
@@ -56,7 +56,7 @@ public class Quickselect {
       }
       if(mouseX > 327.5 && mouseX < 410 && mouseY > 38.75 && mouseY < 121.25) {
         //games[3].run();
-        System.out.println("4");
+        games.get(0).run(player, dc);
       }
       if(mouseX > 20 && mouseX < 102.5 && mouseY > 158.75 && mouseY < 241.25) {
         //games[4].run();
