@@ -15,7 +15,7 @@ public class Quickselect {
     games.add(new Crash()); //game 2
     games.add(new CoinFlip()); //game 3
     games.add(new Klondike()); //game 4
-    games.add(null); //game 5
+    games.add(new Memory()); //game 5
     games.add(new Slots()); //game 6
     games.add(null); //game 7
     games.add(new War()); //game 8
@@ -34,7 +34,7 @@ public class Quickselect {
     dc.drawString("$" + df.format(player.getMoney()), 225, 280);
     dc.setPaint(Color.RED);
     dc.drawImage("CrashAssets/testicon.png", 163.75, 80); //2
-    dc.fillRect(61.25, 200, 82.5, 82.5); //5
+    dc.drawImage("Memory_Images/memoryIcon.png", 61.25, 200); //5
     dc.fillRect(61.25, 80, 82.5, 82.5); //1
     dc.setPaint(Color.BLACK);
     dc.drawString("SumGame", 61.25, 80);
@@ -72,6 +72,7 @@ public class Quickselect {
       }
       if(mouseX > 20 && mouseX < 102.5 && mouseY > 158.75 && mouseY < 241.25) {
         //games[4].run();
+        games.get(4).run(player, dc);
       }
       if(mouseX > 122.5 && mouseX < 205 && mouseY > 158.75 && mouseY < 241.25) {
         games.get(5).run(player, dc); //games[5].run();
