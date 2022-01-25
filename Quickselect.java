@@ -11,11 +11,14 @@ public class Quickselect {
   public Quickselect () {
     player = new Player(1000);
     games.add(null); //placeholder[1]
-    games.add(null); //placeholder[2]
+    games.add(new Klondike()); 
     games.add(null); //placeholder[3]
     games.add(null); //placeholder[4]
     games.add(null); //placeholder[5]
     games.add(new Slots());
+    games.add(null); //placeholder[7]
+    games.add(null); //placeholder[8]
+  
     //games.add(new YourGame());
     //Add the games to the arraylist here as they become complete
   }
@@ -31,7 +34,7 @@ public class Quickselect {
     dc.setPaint(Color.RED);
     dc.drawImage("CrashAssets/testicon.png", 61.25, 80); //1
     dc.fillRect(61.25, 200, 82.5, 82.5); //5
-    dc.fillRect(163.75, 80, 82.5, 82.5); //2
+    dc.drawImage("Klondike_images/klondike_logo.png", 163.75, 80); //2
     dc.drawImage("slot_images/slotsIcon.png", 163.75, 200); //6
     dc.fillRect(266.25, 80, 82.5, 82.5); //3
     dc.fillRect(266.25, 200, 82.5, 82.5); //7
@@ -53,7 +56,7 @@ public class Quickselect {
       }
       if(mouseX > 122.5 && mouseX < 205 && mouseY > 38.75 && mouseY < 121.25) {
         //games[1].run();
-        System.out.println("2");
+        games.get(1).run(player, dc);
       }
       if(mouseX > 224.75 && mouseX < 307.25 && mouseY > 38.75 && mouseY < 121.25) {
         //games[2].run();
