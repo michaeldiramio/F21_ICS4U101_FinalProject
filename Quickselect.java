@@ -60,6 +60,7 @@ public class Quickselect {
       //Game title goes here
       if(mouseX > 20 && mouseX < 102.5 && mouseY > 38.75 && mouseY < 121.25) {
         System.out.println("1");
+        games.get(0).run(player, dc);
       }
       if(mouseX > 122.5 && mouseX < 205 && mouseY > 38.75 && mouseY < 121.25) {
         games.get(1).run(player, dc);
