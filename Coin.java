@@ -1,18 +1,13 @@
 import java.util.*;
 
+
 public class Coin {
   private int num;
-  Random r = new Radnom();
+  Random r = new Random();
 
-  public int this.flip(){
-    this.num = r.nexInt(2);
+  public int flip(){
+    this.num = r.nextInt(2);
     return this.num;
   }
-
-  public void r(){
-    return this.num;
-  }
-
-
 
 }
