@@ -5,13 +5,16 @@ public class Deck {
 
   private ArrayList<Card> cards = new ArrayList<>();
 
-  public Deck() {
-    char[] suits = {'s', 'c', 'h', 'd'};
-    for(int i = 0; i < 13; i++){
-      for(int j = 0; j < suits.length; j++){
-        this.cards.add(new Card(suits[j], i+1));
+  public Deck(boolean dum) {
+    if(dum == true){
+      char[] suits = {'s', 'c', 'h', 'd'};
+      for(int i = 0; i < 13; i++){
+        for(int j = 0; j < suits.length; j++){
+          this.cards.add(new Card(suits[j], i+1));
+        }
       }
     }
+    
   }
 
   public void shuffle() {
@@ -22,19 +25,22 @@ public class Deck {
     return this.cards.size();
   }
 
-  public Card getCard() {
+  public Card drawCard() {
     Random r = new Random();
-    return cards.get(r.nextInt(52));
+    Card temp = this.cards.get(0);
+    this.cards.remove(this.cards.get(0));
+    return temp;
   }
 
   //will make cards arraylist 1 slot bigger
   public void addCard(char suit, int num) {
-    cards.add(new Card(suit, num));
+    this.cards.add(new Card(suit, num));
   }
 
   //will make cards arraylist 1 slot smaller
   public void removeCard(char suit, int num) {
-    cards.remove(new Card(suit, num));
+    Card temp = new Card(suit, num);
+    this.cards.remove(temp);
   }
 
   //testing
@@ -42,5 +48,9 @@ public class Deck {
     for(int i = 0; i < cards.size(); i++){
       System.out.println(this.cards.get(i).getSuit() + " " + this.cards.get(i).getNum());
     }
+  }
+
+  public Card getCard(int num){
+    return this.cards.get(num);
   }
 }

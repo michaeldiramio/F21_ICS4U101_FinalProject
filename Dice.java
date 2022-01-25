@@ -97,6 +97,8 @@ public class Dice {
         }
         x = x + 60;
       }
+      
+      dc.redraw();
     }
    
    
