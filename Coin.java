@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Coin {
   private int num;
-  Random r = new Radnom();
+  Random r = new Radom();
 
   public int this.flip(){
     this.num = r.nexInt(2);
