@@ -10,12 +10,13 @@ public class Quickselect {
 
   public Quickselect () {
     player = new Player(1000);
-    games.add(null); //placeholder[1]
+    games.add(new SumGame()); //placeholder[1]
     games.add(null); //placeholder[2]
     games.add(null); //placeholder[3]
     games.add(null); //placeholder[4]
     games.add(null); //placeholder[5]
     games.add(new Slots());
+    
     //games.add(new YourGame());
     //Add the games to the arraylist here as they become complete
   }
@@ -29,9 +30,12 @@ public class Quickselect {
     dc.setPaint(Color.BLACK);
     dc.drawString("$" + df.format(player.getMoney()), 225, 280);
     dc.setPaint(Color.RED);
-    dc.drawImage("CrashAssets/testicon.png", 61.25, 80); //1
+    dc.drawImage("CrashAssets/testicon.png", 163.75, 80); //2
     dc.fillRect(61.25, 200, 82.5, 82.5); //5
-    dc.fillRect(163.75, 80, 82.5, 82.5); //2
+    dc.fillRect(61.25, 80, 82.5, 82.5); //1
+    dc.setPaint(Color.BLACK);
+    dc.drawString("SumGame", 61.25, 80);
+    dc.setPaint(Color.RED);
     dc.drawImage("slot_images/slotsIcon.png", 163.75, 200); //6
     dc.fillRect(266.25, 80, 82.5, 82.5); //3
     dc.fillRect(266.25, 200, 82.5, 82.5); //7
