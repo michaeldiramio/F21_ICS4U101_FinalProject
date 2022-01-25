@@ -11,7 +11,8 @@ public class Quickselect {
   public Quickselect () {
     player = new Player(1000);
 
-    
+
+  
 
     games.add(new SumGame()); //game 1
     games.add(new Crash()); //game 2
@@ -20,9 +21,8 @@ public class Quickselect {
     games.add(null); //game 5
     games.add(new Slots()); //game 6
     games.add(null); //game 7
-    games.add(null); //game 8
+    games.add(new War()); //game 8
     
-
     //games.add(new YourGame());
     //Add the games to the arraylist here as they become complete
   }
@@ -46,7 +46,7 @@ public class Quickselect {
     dc.fillRect(266.25, 80, 82.5, 82.5); //3
     dc.fillRect(266.25, 200, 82.5, 82.5); //7
     dc.fillRect(368.75, 80, 82.5, 82.5); //4
-    dc.fillRect(368.75, 200, 82.5, 82.5); //8
+    dc.drawImage("War_images/war_logo.png", 368.75, 200); //8
   }
 
   public void checkClicks(DConsole dc) {
@@ -86,7 +86,7 @@ public class Quickselect {
       }
       if(mouseX > 327.5 && mouseX < 410 && mouseY > 158.75 && mouseY < 241.25) {
         //games[7].run();
-        System.out.println("8");
+        games.get(7).run(player, dc);
       }
     }
   }
