@@ -113,7 +113,7 @@ public class War extends Game {
           oppDeck.addCard(oppWin.drawCard());
         }
         if (playerDeck.checkSize() == 0) {
-          System.out.println("The opponent wins!");         
+          System.out.println("The opponent wins!");        
         } else if (oppDeck.checkSize() == 0) {
           System.out.println("You win!");
         }
