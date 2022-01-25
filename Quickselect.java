@@ -17,7 +17,7 @@ public class Quickselect {
     games.add(new SumGame()); //game 1
     games.add(new Crash()); //game 2
     games.add(new CoinFlip()); //game 3
-    games.add(null); //game 4
+    games.add(new Memory()); //game 4
     games.add(null); //game 5
     games.add(new Slots()); //game 6
     games.add(null); //game 7
@@ -45,7 +45,7 @@ public class Quickselect {
     dc.drawImage("slot_images/slotsIcon.png", 163.75, 200); //6
     dc.fillRect(266.25, 80, 82.5, 82.5); //3
     dc.fillRect(266.25, 200, 82.5, 82.5); //7
-    dc.fillRect(368.75, 80, 82.5, 82.5); //4
+    dc.drawImage("Memory_Images/memoryIcon.png", 368.75, 80); //4
     dc.drawImage("War_images/war_logo.png", 368.75, 200); //8
   }
 
@@ -71,11 +71,13 @@ public class Quickselect {
       }
       if(mouseX > 327.5 && mouseX < 410 && mouseY > 38.75 && mouseY < 121.25) {
         //games[3].run();
+        games.get(3).run(player, dc);
+        
         
       }
       if(mouseX > 20 && mouseX < 102.5 && mouseY > 158.75 && mouseY < 241.25) {
         //games[4].run();
-        System.out.println("5");
+        //System.out.println("5");
       }
       if(mouseX > 122.5 && mouseX < 205 && mouseY > 158.75 && mouseY < 241.25) {
         games.get(5).run(player, dc); //games[5].run();
